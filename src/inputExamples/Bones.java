@@ -9,6 +9,7 @@ public class Bones {
 		int broken;
 		broken = input.nextInt();
 		System.out.println("I have broken " + broken +" bones");
+		input.close(); 
 		
 		
 	}
