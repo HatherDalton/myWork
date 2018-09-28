@@ -13,7 +13,7 @@ public class SphereVolume {
 
 		double pie= 3.14;
 	
-		double fraction= 1.33333;
+		double fraction= 4.0/3.0;
 		
 		double area;
 		area= fraction * (pie * radius * radius * radius) ;
