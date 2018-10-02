@@ -6,32 +6,41 @@ public class MakeChange {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner (System.in);
 
-		System.out.println("How much did your bill cost in pennies?");
-		int cost;
-		cost = input.nextInt();
-		System.out.println("What did you pay with in pennies?");
-		int bill;
-		bill = input.nextInt();
+		System.out.println("What is your bill cost?");
+		double cost;
+		cost = input.nextDouble();
+		System.out.println("What did you pay with");
+		double bill;
+		bill = input.nextDouble();
 		
-		int sum;
+		double sum;
 		int quarters;
 		int dimes;
 		int nickels;
 		int penny;
+		int dollars;
+		int remainder;
+		
 		sum = bill - cost;
 		
-		quarters = sum / 25;
-		quarters = quarters * 25;
-		sum = sum - quarters;
+		dollars = sum / 100.0;// 2
+		remainder = dollars % 100; //34
 		
-		dimes = sum /10;
-		nickels =  sum/ 5;
-		penny =  sum/1;
+		quarters = remainder / 25; // 1.36
+		remainder= (remainder) - (25 * quarters); // 9
+		
+		dimes = remainder /10; // 0
+		//remainder = remainder - 10; //
+		
+		nickels =  remainder/ 5; //1.8
+		remainder = remainder - 5; // 4
+		
+		penny =  remainder/1;
 		
 		
 		System.out.println("You will get " +sum+ " back in change");
 		
-		System.out.println("Your change will come out to be "+quarters+ " quarters," +dimes+ " dimes," +nickels+ " nickels" +penny+ " pennies");
+		System.out.println("Your change will come out to be "+dollars+ " dollars, "+quarters+ " quarters, " +dimes+ " dimes, " +nickels+ " nickels, and" +penny+ " pennies");
 		
 
 		input.close();
