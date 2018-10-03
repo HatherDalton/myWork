@@ -14,17 +14,17 @@ public class MakeChange {
 		bill = input.nextDouble();
 		
 		double sum;
-		int quarters;
-		int dimes;
-		int nickels;
-		int penny;
-		int dollars;
-		int remainder;
+		double quarters;
+		double dimes;
+		double nickels;
+		double penny;
+		double dollars;
+		double remainder;
 		
 		sum = bill - cost;
 		
-		dollars = sum / 100.0;// 2
-		remainder = dollars % 100; //34
+		dollars = sum / 100;// 2
+		remainder = sum - dollars ; //34
 		
 		quarters = remainder / 25; // 1.36
 		remainder= (remainder) - (25 * quarters); // 9
