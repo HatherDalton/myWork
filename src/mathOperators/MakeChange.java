@@ -6,25 +6,20 @@ public class MakeChange {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner (System.in);
 
-		System.out.println("What is your bill cost?");
-		double cost;
-		cost = input.nextDouble();
-		System.out.println("What did you pay with");
-		double bill;
-		bill = input.nextDouble();
+		System.out.println("What is the change you will get back??");
+		int sum;
+		sum = input.nextInt();
 		
-		double sum;
-		double quarters;
-		double dimes;
-		double nickels;
-		double penny;
-		double dollars;
-		double remainder;
+		int quarters;
+		int dimes;
+		int nickels;
+		int penny;
+		int dollars;
+		int remainder;
 		
-		sum = bill - cost;
 		
 		dollars = sum / 100;// 2
-		remainder = sum - dollars ; //34
+		remainder = sum % 100 ; //34
 		
 		quarters = remainder / 25; // 1.36
 		remainder= (remainder) - (25 * quarters); // 9
