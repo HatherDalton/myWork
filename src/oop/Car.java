@@ -6,10 +6,15 @@ public class Car {
 	//default constructor
 	public Car()
 	{
-	
-		//Statement to initialize the state of the object
-		
 	}
+		public void sayOdometer(){
+		System.out.print("10,000 miles");
+		}
+		
+		public void sayFlat(){
+			System.out.print("Your car has a flat tire.");
+			}
+	
 	//methods- things the object can do
 }
 
