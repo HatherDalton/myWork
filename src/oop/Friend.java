@@ -5,12 +5,14 @@ public class Friend {
 	// constructor- methods for constructing the object
 	//default constructor
 	public Friend()
-	{
+	{}
 	
 		//Statement to initialize the state of the object
 		
-	}
+	
 	//methods- things the object can do
 }
 
 
+
+//public static void main (String[]args) {

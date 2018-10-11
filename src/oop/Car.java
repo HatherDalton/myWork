@@ -14,6 +14,10 @@ public class Car {
 		public void sayFlat(){
 			System.out.print("Your car has a flat tire.");
 			}
+		
+		public void sayThirsty() {
+			System.out.println("Your car is out of gas");
+		}
 	
 	//methods- things the object can do
 }
