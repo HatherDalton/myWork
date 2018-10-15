@@ -18,11 +18,10 @@ public class HouseImprovement {
 		double sum= ((total/15)*2);
 		System.out.println("It will take you "+sum+ " hours to complete the garden");	 
 	}
-	public void fillPool (double gph) {
-		System.out.println("What is the volume of your pool?");
+	public void fillPool (double radius, double height) {
 		double volume;
-		volume = input.nextDouble();
-		double total= volume / 300;
-		System.out.println("It will take you " +total+ "hours to fill your pool.");
+		//volume = (Math.PI((radius*radius) * height));
+		//double total= volume / 300;
+		//System.out.println("It will take you " +total+ "hours to fill your pool.");
 	}
 }

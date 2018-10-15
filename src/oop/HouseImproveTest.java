@@ -19,9 +19,7 @@ public class HouseImproveTest {
 		double radius = input.nextDouble();
 		System.out.println("What is the height of the pool?");
 		double height = input.nextDouble();
-
-		//double volume= (Math.PI((radius*radius) * height));
-		//bob.fillPool
+		//bob.fillPool;
 
 	}
 	
