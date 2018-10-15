@@ -20,7 +20,22 @@ public class Numbers {
 		double total= num1 + num2;
 		System.out.println(total);
 	}
+	
+	public double returnSquare (double base) {
+		double answer= base * base;
+		return answer;
+	}
+	
+	public double returnArea (double length, double width){
+		double answer = length * width;
+		return answer;
+	}
+	public int returnRoundUp (double num){
+		return (int)num+ 1;
+		
+	}
 }
+
 
 
 
