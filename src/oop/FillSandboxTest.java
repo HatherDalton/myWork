@@ -29,18 +29,18 @@ public class FillSandboxTest {
 		//three
 		System.out.println("What is the length of the sandbox:");
 		double lengthTwo;
-		length = input.nextDouble();
+		lengthTwo = input.nextDouble();
 		System.out.println("What is the width of the sandbox:");
 		double widthTwo;
-		width = input.nextDouble();
+		widthTwo = input.nextDouble();
 		System.out.println("What is the depth of the sandbox:");
 		double depthTwo;
-		depth = input.nextDouble();
+		depthTwo = input.nextDouble();
 		System.out.println("What is the rate (cubic feet per hour) to fill the sandbox");
 		double rateTwo;
-		rate = input.nextDouble();
-		bob.SandboxThree(length, width, depth, rate);
-		//double total = bob.SandboxThree(lengthTwo, widthTwo, depthTwo, rateTwo);
-		//System.out.println("It will take you " +total+ " hours to fill the sandbox");
+		rateTwo = input.nextDouble();
+		//bob.SandboxThree(length, width, depth, rate);
+		double total = bob.SandboxThree(lengthTwo, widthTwo, depthTwo, rateTwo);
+		System.out.println("It will take you " +total+ " hours to fill the sandbox");
 	}
 }
