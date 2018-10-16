@@ -10,7 +10,6 @@ public class FillSandboxTest {
 		//one
 		bob.SandboxOne();
 		
-		
 		//two
 		Scanner input = new Scanner (System.in);
 		System.out.println("What is the length of the sandbox:");
@@ -22,10 +21,26 @@ public class FillSandboxTest {
 		System.out.println("What is the depth of the sandbox:");
 		double depth;
 		depth = input.nextDouble();
-		System.out.println("What is the rate to fill the sandbox");
+		System.out.println("What is the rate (cubic feet per hour) to fill the sandbox");
 		double rate;
 		rate = input.nextDouble();
 		bob.SandboxTwo(length, width, depth, rate);
 		
+		//three
+		System.out.println("What is the length of the sandbox:");
+		double lengthTwo;
+		length = input.nextDouble();
+		System.out.println("What is the width of the sandbox:");
+		double widthTwo;
+		width = input.nextDouble();
+		System.out.println("What is the depth of the sandbox:");
+		double depthTwo;
+		depth = input.nextDouble();
+		System.out.println("What is the rate (cubic feet per hour) to fill the sandbox");
+		double rateTwo;
+		rate = input.nextDouble();
+		bob.SandboxThree(length, width, depth, rate);
+		//double total = bob.SandboxThree(lengthTwo, widthTwo, depthTwo, rateTwo);
+		//System.out.println("It will take you " +total+ " hours to fill the sandbox");
 	}
 }

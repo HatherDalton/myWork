@@ -16,14 +16,14 @@ public class FillSandbox {
 	System.out.println("What is the depth of the sandbox:");
 	double depth;
 	depth = input.nextDouble();
-	System.out.println("What is the rate to fill the sandbox");
+	System.out.println("What is the rate (cubic feet per hour) to fill the sandbox");
 	double rate;
 	rate = input.nextDouble();
 	
 	double volume = length * width * depth;
 	double total=  volume/ rate;
 	
-	System.out.println("It will take you " +total+ "to fill th sand box");
+	System.out.println("It will take you " +total+ " hours to fill the sandbox");
 
 	}
 	
@@ -31,12 +31,15 @@ public class FillSandbox {
 	public void SandboxTwo(double length, double width, double depth, double rate) {
 		double volume = length * width * depth;
 		double total=  volume/ rate;
-		System.out.println("It will take you " +total+ " to fill the sand box");
+		System.out.println("It will take you " +total+ " hours to fill the sandbox");
 
 		}
 	
 	//three
-	public void SandboxThree() {
-	System.out.println("");
+	public double SandboxThree(double lengthTwo, double widthTwo, double depthTwo, double rateTwo) {
+		double volume = lengthTwo * widthTwo * depthTwo;
+		double total=  volume/ rateTwo;
+		return total;
+
 	}
 }
