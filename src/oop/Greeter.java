@@ -4,8 +4,20 @@ public class Greeter {
 	// instance field-data storage
 	// constructor- methods for constructing the object
 	//default constructor
-	public Greeter()
-	{}
+	private int age;
+	public Greeter(){
+		age= -999;
+	}
+	
+	//getter
+	public int getAge() {
+		return age;
+	}
+	
+	//setter
+	public void setAge(int xAge) {
+		age = xAge;
+	}
 	
 		//Statement to initialize the state of the object
 		
