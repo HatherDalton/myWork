@@ -9,21 +9,25 @@ public class Employee {
 	public Employee() {
 		wage = 7.5;
 	}
-	//getter
+	//Wage
 		public double getWage() {
 			return wage;
 		}
-	//setter
+	
 		public void setWage (double newW) {
 			wage= newW;
 		}
-		
+	//Experience
 		public double getExp() {
 			return experience;
 		}
 		
 		public void setExp(int newExp) {
 			experience= newExp;
+		}
+	//Raise
+		public void raise() {
+			wage = wage * 1.1;
 		}
 		
 }
