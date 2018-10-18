@@ -4,6 +4,7 @@ public class CircleClass {
 
 	private double radius;
 	private double area;
+	private double circum;
 	public CircleClass() {
 		radius = 7;
 	}
@@ -15,6 +16,11 @@ public class CircleClass {
 	public double getArea() {
 		area = (Math.PI * (radius * radius));
 		return area;
+	}
+	
+	public double getCircum() {
+		circum = (2* (Math.PI * radius));
+		return circum;
 	}
 	
 	public void setRadius(int newRad) {
