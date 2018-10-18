@@ -9,7 +9,10 @@ public class Rectangle {
 		width = 0;
 		length = 0;
 	}
-	
+	public Rectangle(double w, double l) {
+		width = w;
+		length = l;
+	}
 	public double getLength() {
 		return length;
 	}

@@ -8,10 +8,15 @@ public class CircleClass {
 	public CircleClass() {
 		radius = 7;
 	}
+	public CircleClass(double xRadius) {
+		radius= xRadius;
+	}
 	
 	public double getRadius() {
 		return radius;
 	}
+	
+	
 	
 	public double getArea() {
 		area = (Math.PI * (radius * radius));
