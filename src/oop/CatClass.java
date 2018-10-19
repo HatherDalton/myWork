@@ -6,8 +6,8 @@ public class CatClass {
 	private double sleep;
 
 	public CatClass() {
-		age = 6;
-		sleep = 4;
+		age = 0;
+		sleep = 0;
 	}
 
 	public CatClass(double a, double slept) {
@@ -24,12 +24,16 @@ public class CatClass {
 	}
 
 	public void moreSleep() {
-		sleep= sleep++;
+		sleep+=1;
 		
 	}
 
 	public void lessSleep() {
-		sleep= sleep--;
+		sleep-=1;
 		
+	}
+	public double checkSleep()
+	{
+		return sleep;
 	}
 }
