@@ -12,7 +12,7 @@ public class TriangleTest {
 		System.out.println("Perimeter= " + bob.getPeri());
 		System.out.println("                ");
 
-		Triangle fred = new Triangle();
+		Triangle fred = new Triangle(6,7);
 		System.out.println("Triangle Two;");
 		System.out.println("Base= " + fred.getBase());
 		System.out.println("Height= " + fred.getHeight());
@@ -23,7 +23,7 @@ public class TriangleTest {
 		
 		fred.setBase(2);
 		fred.setHeight(9);
-		System.out.println("Triangle Two;");
+		System.out.println("Triangle Three;");
 		System.out.println("Base= " + fred.getBase());
 		System.out.println("Height= " + fred.getHeight());
 		System.out.println("hypot= " + fred.getHypot());

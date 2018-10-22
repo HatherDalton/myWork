@@ -22,6 +22,18 @@ public class IsosTrapezoid {
 		height = xHeight;
 		leg = xLeg;
 	}
+	public double getBaseOne() {
+		return baseOne;
+	}
+	public double getBaseTwo() {
+		return baseTwo;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public double getLeg() {
+		return leg;
+	}
 	
 	public double getArea() {
 		area= (height*((baseOne + baseTwo)/2)) ;
