@@ -18,18 +18,36 @@ public class Triangle {
 		height = xHeight;
 	}
 
+	public double getBase() {
+		return base;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setBase(double xBase) {
+		base = xBase;
+	}
+
+	public void setHeight(double xHeight) {
+		height = xHeight;
+	}
+
 	public double getArea() {
 		area = 0.5 * (base * height);
 		return area;
 	}
 
 	public double getPeri() {
-		peri= base + height + hypot;
+		peri = base + height + hypot;
 		return peri;
 	}
+
 	public double getHypot() {
-		hypot= ((base * base) + (height * height));
-		hypot= Math.sqrt(hypot());
+		hypot = ((base * base) + (height * height));
+		hypot = Math.sqrt(hypot);
 		return hypot;
 	}
+
 }
