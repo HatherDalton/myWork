@@ -6,13 +6,24 @@ public class ActivityAge {
 		// TODO Auto-generated method stub
 
 		Scanner input = new Scanner (System.in);
-		double height;
+		double age;
 		double length;
-		System.out.println("What is your height in inches?");
-		height = input.nextDouble();
-		System.out.println("What is your shoe size in inches?");
-		length = input.nextDouble();
-		System.out.println(height + length >= 26 );
+		System.out.println("What is your age?");
+		age = input.nextDouble();
+		
+		System.out.println(age >= 26 );
+	
+	// Age activity if() practice
+		
+		int xAge;
+		System.out.println("What is your age?");
+		xAge = input.nextInt();
+		 if (xAge > 18) {
+			 System.out.println("You will be charged as an adult");
+		 }
+	 
+		 System.out.println("Have a nice day :]");
+	
 	}
 
 }
