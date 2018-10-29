@@ -58,7 +58,7 @@ public class BasicIf {
 		if(xAge+gpa>20) {
 			System.out.println("You get $250 for your birthday");
 		}
-		if(xAge+gpa<20) {
+		else {
 			System.out.println("You get $30 for your birthday");
 		}
 
