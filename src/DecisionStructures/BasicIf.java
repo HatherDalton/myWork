@@ -62,5 +62,29 @@ public class BasicIf {
 			System.out.println("You get $30 for your birthday");
 		}
 
+		
+		//CuttingGrass
+		double frontYard;
+		System.out.println("What is the length of your front yard in feet");
+		double length = input.nextDouble();
+		System.out.println("What is the width of your front yard in feet");
+		double width = input.nextDouble();
+		frontYard= length * width;
+		double cost = ((frontYard/100)*1);
+		
+		System.out.println("true or false; Do you have a back yard?");
+		boolean backYard = input.nextBoolean();
+		if (backYard==true) {
+			System.out.println("What is the radius of your backyard in meters?");
+			double radius = input.nextDouble();
+			double area= (3.14*(radius * radius));
+			double cost2= ((area/75)*1.5);
+			System.out.println("The backyard will cost you " +cost2+ " dollars");
+		}
+		
+		System.out.println("The frontyard will cost you " +cost+ " dollars");
+		
+
+		
 	}
 }
