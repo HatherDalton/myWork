@@ -45,25 +45,30 @@ public class BasicNested {
 		double test2=input.nextDouble();
 		System.out.println("What percent did you get on your third test?");
 		double test3=input.nextDouble();
-		double average=((test1*test2*test3)/3);
-		if (Math.abs(average-92.5)>=0.000001 && Math.abs(average-100.0)>=0.000001) {
+		double average=((test1+test2+test3)/3);
+		System.out.println("Your average= " +average);
+		final double CLOSE= 0.000001;
+		if ((Math.abs(average-92.5)<=CLOSE) && average>=92.5 || (Math.abs(average-100.0)<=CLOSE && average<=100.0)) {
 			System.out.println("You get and 'A'");
 		}
 		else {
-			if (Math.abs(average-84.5)>=0.000001 && Math.abs(average-92.4)>=0.000001) {
+			if ((Math.abs(average-84.5)<=CLOSE) && average>=84.5 || (Math.abs(average-92.4)<=CLOSE) && average<92.5) {
 				System.out.println("You get and 'B'");
 			}
 			else {
-				if (Math.abs(average-77.5)>=0.000001 && Math.abs(average-84.4)>=0.000001) {
-					System.out.println("You get and 'B'");
+				if ((Math.abs(average-77.5)<=CLOSE) && average>=77.5 || (Math.abs(average-84.4)<=CLOSE) && average<84.5) {
+					System.out.println("You get and 'C'");
 				}
 				else {
-					if (Math.abs(average-69.5)>=0.000001 && Math.abs(average-77.4)>=0.000001) {
-						System.out.println("You get and 'B'");
+					if ((Math.abs(average-69.5)<=CLOSE) && average>=69.5 || (Math.abs(average-77.4)<=CLOSE) && average<77.5) {
+						System.out.println("You get and 'D'");
 					}
 					else {
-						if (Math.abs(average-0.0)>=0.000001 && Math.abs(average-69.4)>=0.000001) {
-							System.out.println("You get and 'B'");
+						if ((Math.abs(average-0.0)<=CLOSE) && average>=0.0 || (Math.abs(average-69.4)<=CLOSE) && average<69.5) {
+							System.out.println("You get and 'F'");
+						}
+						else {
+							System.out.println("You get no Grade");
 						}
 					}
 				}
