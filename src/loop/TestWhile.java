@@ -18,20 +18,39 @@ public class TestWhile {
 			num = input.nextInt();
 		}
 	
-//Count by 5
-		int five=0;
-		System.out.println("Stop Number");
-		int stop= input.nextInt();
-		while (five <= stop) {
-			System.out.println(five);
-			five= five+5;
-			/**
-			System.out.println("Number to stop?");
-			int stop = input.nextInt();
-			while (mult <= stop) {
-				System.out.println(mult);
-				mult = mult + 2;**/
+//Test Scores
+		int score=0;
+		int count=0;
+		int s=0;
+		while (score!= 9999) {
+			System.out.println("What is your test score? (9999 to end)");
+			score= input.nextInt();
+			s = s + score;
+			count++;
 		}
+		
+		System.out.println("Sum= " + (s-9999));
+		System.out.println("Average= " + (s/(Math.abs(count-1))));
+
+//Rounding Run
+		int number=0;
+		int n=0;
+		while (number !=9999) {
+			System.out.println("Give me a 4 digit integer");
+			number= input.nextInt();
+			System.out.println("What is the number at the tenths place?");
+			n= input.nextInt();
+			if (n >= 50) {
+				number= number+100;
+			}
+			else {
+				number= number-100;
+			}
 		}
-	
+		
+	//
+			}
 	}
+
+	
+	
