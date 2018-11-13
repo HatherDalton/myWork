@@ -21,19 +21,27 @@ public class DoWhileHW {
 	//How many Numbers
 		int num1=0;
 		int num;
+		int count=0;
 		System.out.println("Year?");
 		int year= input.nextInt();
 		do {
 			System.out.println("Pick a number (Quit= 9999)");
 			num= input.nextInt();
 			num1= num1+num;
+			count++;
 		}while(num!=9999);
 		if (num1>=year) {
 			System.out.println("Sum= " + num1);
+			System.out.println("Numbers Entered= " +count);
 		}
 		
 //CircleTest
-		
+		System.out.println("What is one radius?");
+		int radius= input.nextInt();
+		System.out.println("What is another radius?");
+		int radi= input.nextInt();
+		System.out.println("What is final radius?");
+		int rad= input.nextInt();
 //TriangleTest
 
 	
