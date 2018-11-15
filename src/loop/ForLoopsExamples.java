@@ -35,7 +35,7 @@ public class ForLoopsExamples {
 //Example#9
 		int number=0;
 		int sum=0;
-		for (number=1; counter<=1; counter = counter +1) {
+		for (number=1; number<=1; number = number +1) {
 		System.out.println("Pick a number");
 		number= input.nextInt();
 		sum= sum + number;
