@@ -10,23 +10,26 @@ public class ForLoopsHW {
 //Sum of Odd
 		int p= 6;
 		int counter=0;
-		for (p=6;p<=1; p=p+2) {
+		System.out.println("Positive Number");
+		int num= input.nextInt();
+		for (p=1;p<num; p=p+1) {
 			counter= counter+p;
 			System.out.println("Sum= "+counter);
 		}
 //Class Average
 		int students;
+		int i=1;
 		int grade;
 		int sum=0;
 		int average;
-		System.out.println("How many tudents are in the class?");
+		System.out.println("How many students are in the class?");
 		students=input.nextInt();
-		for (students=1; students<=30; students=students-1) {
+		for (i=1; i<=students; i++) {
 			System.out.println("What is the students grade");
 			grade=input.nextInt();
 			sum= sum+grade;
 		}
-		average= sum/students;
+		System.out.println(average= sum/students);
 	}
 
 }
