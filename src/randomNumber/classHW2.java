@@ -10,39 +10,33 @@ public class classHW2 {
 		Scanner input = new Scanner(System.in);
 
 		// FlipCoin
-		Random gen3 = new Random(8);
-		int head = 0;
-		int tail = 0;
+		Random gen3 = new Random();
+		double head = 0.0;
 		int Xmin=1;
 		int Xmax=2;
-		int total = 1;
-		int average = 0;
-		int hAverage=2;
-		int lAverage=1;
+		int total = 0;
+		double hAverage=10;
+		double lAverage=100;
 		
-		for (int k = 1; k <= 1000; k++) {
-			for (int i = 1; i <= 100; i++) {
-				
-				int ranum = Xmin + gen3.nextInt(Xmax - Xmin + 1);
-				if (ranum == 1) {
+		for (int k = 0; k <= 10000; k++) {
+			for (int i = 0; i <= 1000; i++) {
+				int random = Xmin + gen3.nextInt(Xmax - Xmin + 1);
+				if (random == 1) {
 					head++;
-					total++;
-					average = ((head / total) * 100);
-				}
-				else {
-					tail++;
-					total++;
 				}
 			}
-			if (hAverage >= average) {
+			double average = ((head / 1000.0) * 100);
+			if (average > hAverage) {
 				hAverage = average;
 			} 
-			if  (lAverage >= average){
+			if  (average < lAverage){
 				lAverage = average;
 			}
+			head=0;
+			total=0;
 		}
-		System.out.println("Max Persent of heads= " + hAverage);
-		System.out.println("Min Persent of heads= " + lAverage);
+		System.out.println("Max Persent of heads= " + hAverage+"%");
+		System.out.println("Min Persent of heads= " + lAverage+"%");
 
 	}
 
