@@ -44,12 +44,6 @@ public class classHW2 {
 		System.out.println("Max Persent of heads= " + hAverage);
 		System.out.println("Min Persent of heads= " + lAverage);
 
-// Yahtzee
-		Random gen4 = new Random(8);
-// Yahtzee2
-		Random gen5 = new Random(8);
-// Lottery
-		Random gen6 = new Random(8);
 	}
 
 }
