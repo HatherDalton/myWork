@@ -9,7 +9,7 @@ public class classHW {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 //RollDie
-		Random gen = new Random();
+		Random gen = new Random(5);
 		System.out.println("How many sides are on the die?");
 		int die = input.nextInt();
 		System.out.println("How many times do you want to role?");
