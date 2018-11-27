@@ -22,7 +22,7 @@ public class classPractice {
 		for(int i=1; i<=100000; i++) {
 		Xmin=1;
 		Xmax=2;
-		int ranum= min + gen.nextInt(max-min+1);
+		int ranum= Xmin + gen.nextInt(Xmax-Xmin+1);
 		if (ranum ==1)
 		head++;
 		else
