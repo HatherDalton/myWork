@@ -7,9 +7,13 @@ public class ReverseWords {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-		System.out.println("Write a sentance");
+		System.out.println("Write a word");
 		String sen= input.nextLine();
-		sen.length();
+		String reverse= ".";
+		int i;
+		for(i= sen.length()-1; i>=0; i--);
+		reverse= reverse+ sen.charAt(i);
+		
 	}
 
 }
