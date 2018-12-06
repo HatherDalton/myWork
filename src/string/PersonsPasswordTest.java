@@ -8,10 +8,15 @@ public class PersonsPasswordTest {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 		PersonsPassword bob= new PersonsPassword();
-		//do {
-		System.out.println("Please enter the passwor in the format LastName:Password");
+		int pwAttempts;
+		boolean yess = false;
+		do {
+		System.out.println("Please enter the password in the format LastName:Password");
 		String word= input.nextLine();
-		//}while();
+		int place= word.indexOf(":");
+		System.out.println(bob.setPassword(word.substring(place + 1)));
+		
+		}while(yess!= true);
 	}
 
 }
