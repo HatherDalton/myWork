@@ -9,7 +9,7 @@ public class OneDimensionalArrays { // Practice && Notes
 		Scanner input = new Scanner(System.in);
 		
 		double[]scores= new double[5];
-		
+		double sum=0;
 		for (int i=0; i<5; i++) {
 		System.out.println("Test score= ");
 		scores[i] = input.nextDouble();
@@ -21,6 +21,10 @@ public class OneDimensionalArrays { // Practice && Notes
 		for (int j=4; j>=0; j--) {
 			System.out.println(scores[j]);
 		}
+		for (int j=0; j<5; j++) {
+			sum=sum+ scores[j];
+		}
+		System.out.println("Sum= "+sum);
 	}
 
 }
