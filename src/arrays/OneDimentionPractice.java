@@ -16,6 +16,7 @@ public class OneDimentionPractice {
 			if (largest< testScores[i]) {
 				largest=testScores[i];
 			}
+			System.out.println("Lasrgest Test Score"+largest);
 		}
 	}
 
