@@ -21,9 +21,11 @@ public class RollDiceV1 {
 		
 		int[][] rolling = new int[students][rolls];
 		int i;
+		int j;
 		for (i = 0; i < rolling.length; i++) {
 			System.out.println("Student #"+(i+1));
-			for (int j = 0; j < rolling[0].length; j++) {
+			for (j = 0; j < rolling[0].length; j++) {
+				System.out.print("Roll#"+(j+1)+"= ");
 				System.out.print(min+generator.nextInt(max-min+1)+(", "));
 			}
 			System.out.println("    ");
