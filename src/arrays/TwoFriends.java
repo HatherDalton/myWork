@@ -11,17 +11,25 @@ public class TwoFriends {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 		Random generator = new Random();
-		Friend [][] people= new Friend[18][5];
+		final int maxRow= 18;
+		final int maxCol= 5;
+		Friend [][] people= new Friend[maxRow][maxCol];
 		int min=0;
 		int max=100;
-		
+/**
 		for (int row = 0; row < people.length; row++) {
 			for (int column = 0; column < people[0].length; column++) {
-				people[row][column] = new Friend("a",min+generator.nextInt(max-min+1);
+				people[row][column] = new Friend();
+				people[row][column].setAge(min + generator.nextInt(max-min+1));
 			}
-				System.out.println("");
+		}
+		System.out.println("Your firends ages are");
+		for(int row = 0; row < people.length; row++) {
+			for(int column = 0; column < people[0].length; column++) {
+				System.out.println(people[row][column].getAge());
 			}
-			System.out.println("");
+			System.out.println("    ");
+		}**/
 	}
 	
 }
