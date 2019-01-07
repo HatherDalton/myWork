@@ -7,17 +7,25 @@ public class PostHolidayBreak2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		Scanner input=new Scanner(System.in);
-		Random gen= new Random();
+		Scanner input = new Scanner(System.in);
 		
-		String[] names= new String[687];
-		String firstL= "";
+		String name = new String();
+		final int TOTAL = 6;
 		
-		System.out.println("Students names (First Last)");
-		for(int i=0; i<=names.length; i++) {
-			
+		String[] full = new String[TOTAL];
+		
+		for (int i = 0; i < TOTAL; i++) {
+			System.out.println("Enter a student name (First Last):");
+			name = input.nextLine();
+			full[i] = name;
 		}
+		
+		for (int j = 0; j < TOTAL; j++) {
+			name = full[j].substring(full[j].indexOf(" ") + 1);
+			System.out.println(full[j].charAt(full[j].indexOf(" ") - 1) + " " + name.length());
+		}
+		input.close();
+
 	}
 
 }
