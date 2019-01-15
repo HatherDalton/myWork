@@ -12,10 +12,16 @@ public class for_each_loopActivity {
 		int num= input.nextInt();
 		int[]ages= new int[num];
 		
-		for (int temp: ages) {
-			System.out.println("xAge?");
-			
+		for (int j=0;j<ages.length; j++) {
+			System.out.println("Enter students Age");
+			ages[j]= input.nextInt();
 		}
+		
+		int sum=0;
+		for (int y: ages) {
+			sum+=y;
+		}
+		System.out.println("Average age= "+ ((double)sum/ages.length));
 ////////////////////////////////////////////////////////		
 	}
 
