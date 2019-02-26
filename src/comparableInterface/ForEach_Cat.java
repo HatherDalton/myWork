@@ -20,16 +20,13 @@ public class ForEach_Cat {
 		}
 
 		Cat smallest = animal.get(0);
-		for (int i = 1; i < animal.size(); i++) {
-			if (smallest.compareTo(smallest) < 0) {
-				smallest = animal.get(i);
-			}
-		}
-
 		Cat largest = animal.get(0);
-		for (int i = 1; i < animal.size(); i++) {
+		
+		for (Cat temp: animal) {
 			if (largest.compareTo(largest) > 0) {
-				largest = animal.get(i);
+				largest = temp;
+				if (smallest.compareTo(smallest) < 0) {
+					smallest = temp;
 			}
 		}
 
