@@ -1,18 +1,17 @@
 package comparableInterface;
 
-public class Worker {
+public class Worker implements Comparable <Worker>  {
 
-	public class WorkerStart {
 		private int hours;
 		private double rate;
-
 		// constructor(s)
-		public WorkerStart() {
+		
+		public Worker() {
 			hours = 40;
 			rate = 3.50;
 		}
 
-		public WorkerStart(int newHours, double newRate) {
+		public Worker(int newHours, double newRate) {
 			hours = newHours;
 			rate = newRate;
 		}
@@ -40,5 +39,14 @@ public class Worker {
 		public void raise(double amount) {
 			rate = rate + amount;
 		}
+		public int compareTo(Worker temp) {
+	        if (Math.abs(rate - temp.getRate()) < 0.0001) {
+	            return 0;
+	        }
+	        if (rate < temp.getRate()) {
+	            return -1;
+	        } else {
+	            return 1;
+	        }
+		}
 	}
-}

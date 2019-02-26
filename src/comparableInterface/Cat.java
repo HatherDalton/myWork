@@ -1,16 +1,15 @@
 package comparableInterface;
 
-public class Cat {
-	public class CatStart {
+public class Cat implements Comparable<Cat> {
 		private int age;
 		private int sleep;
 
-		public CatStart() {
+		public Cat() {
 			age = 1;
 			sleep = 12;
 		}
 
-		public CatStart(int xAge, int xSleep) {
+		public Cat(int xAge, int xSleep) {
 			age = xAge;
 			sleep = xSleep;
 		}
@@ -43,5 +42,17 @@ public class Cat {
 			sleep--;
 		}
 
+		public int compareTo(Cat temp) {
+			if (age == temp.getAge()) {
+				return 0;
+			}
+			if (age< temp.getAge()) {
+				return -1;
+			}
+			else {
+				return 1;
+			}
+			
+		}
 	}
-}
+
