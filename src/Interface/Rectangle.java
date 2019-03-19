@@ -1,6 +1,6 @@
 package Interface;
 
-public class Rectangle
+public class Rectangle implements shape
 {
     private double length;
     private double width;
