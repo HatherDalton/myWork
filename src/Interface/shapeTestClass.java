@@ -18,13 +18,19 @@ public class shapeTestClass {
 
 		// Can't do because of the interface filter:
 		// System.out.println(bob.getLength());
-
+		System.out.println("                 ");
 		System.out.println("Radius?");
 		double r = input.nextDouble();
 		shape fred = new Circle(r);
 		System.out.println("Circle Area: " + fred.area());
 		System.out.println("Circle Perimeter: " + fred.perimeter());
 
+		//
+		System.out.println("                 ");
+		Rectangle box= new Rectangle(width, length);
+		shape thing = box;
+		
+		
 	}
 
 }

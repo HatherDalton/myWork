@@ -1,7 +1,6 @@
 package Interface;
 
-public class Student
-{
+public class Student implements Person {
 	
 	String name;
 
