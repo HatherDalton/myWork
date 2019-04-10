@@ -1,28 +1,31 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class ShapeTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Rectangle box = new Rectangle(4, 7);
-		System.out.print("Rectangle:");
-		System.out.println("Area= " + box.getArea());
-		System.out.println("Peremiter= " + box.Perimeter());
+		ArrayList<Geo> fred = new ArrayList<Geo>();
+		fred.add(new Rectangle(4, 7));
+		fred.add(new Trapezoid(3, 8, 5, 1, 9));
+		fred.add(new Rectangle(9, 2));
+		fred.add(new Trapezoid(4, 5, 2, 9, 8));
+		fred.add(new Rectangle(5, 1));
+		fred.add(new Trapezoid(4, 2, 6, 8, 10));
 
-		System.out.print("                                ");
+		double largest = 0;
+		for (Geo shape : fred) {
+			if (shape.getArea() > largest) {
+				largest = shape.getArea();
+			}
+		}
 
-		Trapezoid bob = new Trapezoid(5, 6, 7, 8, 10);
-		System.out.print("Trapezoid:");
-		System.out.println("Area= " + bob.getArea());
-		System.out.println("Peremiter= " + bob.Perimeter());
-		
-		System.out.print("                                ");
-
-		Square jeff = new Square (3.9);
-		System.out.print("Square:");
-		System.out.println("Area= " + jeff.getArea());
-		System.out.println("Peremiter= " + jeff.Perimeter());
+		System.out.println("Class= " );
+		System.out.println("Largest= " + largest);
 	}
-
 }
+
+//Still need to show which class the largest object is in
+//Could remember it through the for loop
