@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Rectangle extends Parallelogram implements Geo{
+public class Rectangle extends Parallelogram implements Geo {
 
 	public Rectangle() {
 		super();
@@ -10,4 +10,8 @@ public class Rectangle extends Parallelogram implements Geo{
 		super(l, w, w);
 	}
 
+	public String toString() {
+		return "Rectangle= " + super.toString();
+
+	}
 }

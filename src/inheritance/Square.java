@@ -1,7 +1,7 @@
 package inheritance;
 
 public class Square extends Rectangle {
-	
+
 	public Square() {
 		super();
 	}
@@ -10,5 +10,8 @@ public class Square extends Rectangle {
 		super(side, side);
 	}
 
-	
+	public String toString() {
+		return "Square= " + super.toString();
+	}
+
 }
