@@ -5,9 +5,9 @@ import java.util.Random;
 public class Employee {
 
 	private String name;
-	private int rate;
-	private Integer[] worked = new Integer[52];
-	private int emClassNum;
+	private double rate;
+	private double[] worked;
+	private static int emClassNum = 0;
 	private int employNum;
 
 	public Employee() {
@@ -16,18 +16,21 @@ public class Employee {
 		Random generator = new Random();
 		int min = 0;
 		int max = 40;
-		for (int i = 0; i < worked.length; i++)
+		for (int i = 0; i < 52; i++)
 			worked[i] = min + generator.nextInt(max - min + 1);
 		emClassNum++;
 		employNum = emClassNum;
 	}
 
 	public void modifyRate(double xNum) {
-		rate += xNum;
+		if ((rate + xNum) >= 0)
+			rate += xNum;
 	}
 
-	public int calcPay(int week) {
-		int num = worked[week - 1];
-		return num * rate;
+	public double calcPay(int week) {
+		if (week < 1 || week > 52)
+			return -9999;
+
+		return (worked[week - 1] * rate);
 	}
 }
