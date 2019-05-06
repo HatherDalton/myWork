@@ -5,57 +5,69 @@ import java.util.ArrayList;
 public class BinaryInt {
 
 	private int num;
-	private int Binary;
-	private ArrayList<Number>bin=new ArrayList<Number>();
+
 	public BinaryInt() {
 		num = 0;
 	}
 
-	public BinaryInt(int x) {
-		if (x > 0)
-			num = x;
-		else
-			num = 0;
+	public BinaryInt(int dec) {
+		// math for decimal to binary
+		num = dec;
 	}
 
-	public int getNUm() {
+	public int setBin(int dec) {
+		num = dec == 0 ? 0 : dec % 2 + 10 * setBin(dec / 2);
 		return num;
 	}
 
-	public int getBinary(int thing) {
-		int x;
-		while(thing>0) {
-			x=thing%2;
-			System.out.println(x);
-			bin.add(new Number(x));
-			thing= thing/2;
-			}
-		for(int i=bin.size()-1; i>0; i--) {
-			Binary=bin.get(i).getNUm();}
-		return Binary;
-	}
-	
-	public int check(int x) {
-		if (x > 0)
-			return 1;
-		if (x < num)
-			return -1;
-		if (num == x)
-			return 0;
-		return 999;
+	public int add(int n) {
+		int sum = n + Integer.parseInt(num + "");
+		return Integer.valueOf(Integer.toBinaryString(sum));
 	}
 
-	public int pair(int a, int b) {
-		int thing=a+b; int x; int y;
-		while(thing>0) {
-			x=thing%2;
-			System.out.println(x);
-			bin.add(new Number(x));
-			thing= thing/2;
+	public String switchType() {
+		String dig = "";
+		String bin1 = new String();
+		double num1 = num;
+		while (num1 > 0) {
+			if (num1 % 2 == 1) {
+				dig = "1";
+			} else {
+				dig = "0";
 			}
-		for(int i=bin.size()-1; i>0; i--) {
-			y=bin.get(i).getNUm();}
-		return a+b;
+			bin1 = dig + bin1;
+			num1 /= 2;
+		}
+		return bin1;
+	}
+
+	public int check(int c) {
+		if (num > c) {
+			return -1;
+		}
+		if (c > num) {
+			return 1;
+		}
+		return 0;
+	}
+
+	public String createBinaryInt(int dec) {
+		String dig = "";
+		String bin = new String();
+		double num1 = dec;
+		while (num1 > 0) {
+			if (num1 % 2 == 1) {
+				dig = "1";
+			} else {
+				dig = "0";
+			}
+			bin = dig + bin;
+			num1 /= 2;
+		}
+		return bin;
+	}
+
+	public int getNum() {
+		return num;
 	}
 }
-
