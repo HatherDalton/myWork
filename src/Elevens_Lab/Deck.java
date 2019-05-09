@@ -36,8 +36,8 @@ public class Deck {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		cards = new ArrayList<Card>();
 		for (int i = 0; i < suits.length; i++) {
-			for (int k = 0; i < suits.length; k++) {
-				cards.add(new Card(ranks[i], suits[i], values[i]));
+			for (int k = 0; k < ranks.length; k++) {
+				cards.add(new Card(ranks[k], suits[i], values[k]));
 			}
 		}
 		size = ranks.length * suits.length;
