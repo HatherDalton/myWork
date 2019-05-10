@@ -83,22 +83,32 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-		int[] selection = new int[values.length];
-		int k = 0;
-		Random ran= new Random();
-		int max=51;
-		int min=0;
-		for (int j = 0; j < (values.length + 1) / 2; j++) {
-			System.out.println("Made it.");
-			selection[j] = values[k];
-			k += 2;
-		
-			while() {
-			
+		Random ran = new Random();
+		int[] shuffled = new int[values.length];
+		int temp = 0;
+		for (int j = 0; j < values.length; j++) {
+			temp = ran.nextInt(shuffled.length);
+			while (shuffled[temp] != 0) {
+				//temp = ran.nextInt(0,shuffled.length);
+				shuffled[temp] = values[j];
+			}
+			for (int i = 0; i < values.length; i++) {
+				values[i] = shuffled[i];
+			}
+
 		}
-		
 	}
-	//^try to finish for tomorrow
 	
+	public static void efficientShuffle(int[]values) {
+		int spot=0;
+		int temp=0;
+		for(int j=(values.length) -1; j>0; j--) {
+			spot=(int)(Math.random()*(j+1));
+			temp= values[spot];
+			values[spot]=values[j];
+			values[j]=temp;
+		}
+	}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
